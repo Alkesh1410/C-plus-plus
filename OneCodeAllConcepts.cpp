@@ -8,11 +8,11 @@ class A
     protected:
     int a1,a2;
     public:
-    A(){ cout << "This is default constructor of A\n"; }
+    A(){ cout << "This is default constructor of A\n"; }        //  Function Overloading (Compile-time polymorphism)
     A(int w, int x):a1(w),a2(x){ cout << "This is parameterised constructor of A\n"; }
 };
 
-class B: virtual public A
+class B: virtual public A                                       //  Inheritance
 {
     protected:
     int b;
@@ -30,14 +30,14 @@ class C: virtual public A
     C(int w,int x,int y):A(w,x),c(y){ cout << "This is parameterised constructor of C\n"; }
 };
 
-class D: public B, public C
+class D: public B, public C                             //  Run-time Polymorphism
 {
-    protected:
+    protected:                                          //  Data Encapsulaton and Abstraction
     int d;
     public:
     D(){ cout << "This is default constructor of D\n"; }
     D(int w,int x, int y, int z):C(w,x,y),B(w,x,y),A(w,x),d(z){ cout << "This is parameterised constructor of C\n"; }
-    D operator+(D &obj)
+    D operator+(D &obj)                                    //   Operator Overloading (Compile-time polymorphism)
     {
         D result;
         result.a1 = a1 + obj.a1;
