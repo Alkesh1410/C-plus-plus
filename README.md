@@ -1,5 +1,5 @@
-# C-plus-plus
-# Have tried to cover most of the OOPS concepts used i.e.
+//C-plus-plus
+//Have tried to cover most of the OOPS concepts used i.e.
 
                                                   OOPS
                                                     |
